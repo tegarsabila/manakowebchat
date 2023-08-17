@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manako Bot Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="profile">
+            <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Manako Lime Chan">
+            <div class="profile-info">
+                <h2>Manako Lime Chan</h2>
+                <p>@manakolimechan</p>
+            </div>
+        </div>
+        <div class="chat-box">
+            {% for m_type, message in messages %}
+            <div class="message {{ m_type }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="user-input">
+            <form id="chat-form">
+                <input type="text" id="user-message" placeholder="Ketik pesan...">
+                <button type="submit" id="send-button">Kirim</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

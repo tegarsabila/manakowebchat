@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    background-color: #DCF8C6;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #888;
+}
+
+.chat-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex-grow: 1;
+    max-height: 400px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column; /* Ubah menjadi column */
+    justify-content: flex-end; /* Tambahkan baris ini */
+}
+
+/* Bubble chat styles */
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    padding: 8px 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+    border-radius: 10px;
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.message.user .message-bubble {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+}
+
+.message.bot .message-bubble {
+    background-color: #EAEAEA;
+    align-self: flex-start;
+}
+
+.message-timestamp {
+    font-size: 12px;
+    color: #888;
+    margin-left: 10px;
+}
+
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.user-input {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+#user-message {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    outline: none;
+}
+
+#send-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DCF8C6;
+    color: #888;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
